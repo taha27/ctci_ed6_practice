@@ -29,11 +29,10 @@ public class Q1_4 {
 		//letter count not being fully divisible by 2
 		boolean odd_char_seen = false;
 		for(int i = 0; i < ALPHABET_SIZE; i++) {
-		    if(odd_char_seen) {
-		        return false;
-		    }
-		    
 			if(letter_count[i]%2 == 1) {
+			    if(odd_char_seen) {
+                    return false;
+                }
 			    odd_char_seen = true;
 			}
 		}
