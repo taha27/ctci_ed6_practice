@@ -2,7 +2,7 @@ package ctci_practice;
 
 public class Q1_1 {
 	
-	public static boolean is_unique(String str) {
+	public static boolean isUnique(String str) {
 		if(str.length() > 128) return false;
 		
 		//create boolean array auto initialized to 0
@@ -26,7 +26,7 @@ public class Q1_1 {
 		String[] words = {"helo", "hello", "bad", "103", "111"};
 		
 		for(String word : words) {
-			System.out.println(word + " : " + is_unique(word));
+			System.out.println(word + " : " + isUnique(word));
 		}
 	}
 

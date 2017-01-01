@@ -2,7 +2,7 @@ package ctci_practice;
 
 public class Q1_3 {
 	
-	public static String replace_spaces(char[] url, int url_length) {
+	public static String replaceSpaces(char[] url, int url_length) {
 		
 		int space_count = 0;
 		
@@ -10,8 +10,7 @@ public class Q1_3 {
 		for(int i =  0; i < url_length; i++) {
 			if(url[i] == ' ') space_count++;
 		}
-		
-		System.out.println("Space count : " + space_count);
+		//System.out.println("Space count : " + space_count);
 		
 		//calculate the length of the url including the replacement text
 		//url_length includes the length of the str and the spaces(to be replaced by %)
@@ -62,7 +61,7 @@ public class Q1_3 {
 		
 		int url_len = get_length(char_url) + 1;
 		
-		System.out.println(str + " : " + replace_spaces(char_url, url_len));
+		System.out.println(str + " : " + replaceSpaces(char_url, url_len));
 	}
 
 }
