@@ -24,7 +24,7 @@ public class Q1_5 {
 		return true;
 	}
 	
-	public static boolean one_edit_insert(String a, String b) {
+	public static boolean oneEditInsert(String a, String b) {
 		int aLen = a.length();
 		int bLen = b.length();
 		
@@ -65,7 +65,7 @@ public class Q1_5 {
 		return true;
 	}
 	
-	public static boolean zero_edit_away(String a, String b) {
+	public static boolean zeroEditAway(String a, String b) {
 		if(a.equals(b)) return true;
 		return false;
 	}
@@ -77,17 +77,17 @@ public class Q1_5 {
 							{"acdsfdsfadsf", "acdsfdfadsf"},{"acdsfdsfadsf", "acdsfdsfads"},
 							{"acdsfdsfadsf", "cdsfdsfadsf"},{"adfdsfadsf", "acdfdsfdsf"},
 							{"adfdsfadsf", "bdfdsfadsg"},{"adfdsfadsf", "affdsfads"},
-							{"pale", "pkle"},{"pkle", "pable"}};
+							{"paae", "plle"},{"pkle", "pable"}};
 		
 		//test
 		for(String[] pair : pairs) {
 			
 			//check if the strings are exactly the same
-			if(zero_edit_away(pair[0], pair[1])) {
+			if(zeroEditAway(pair[0], pair[1])) {
 				System.out.println(pair[0] + ", " + pair[1] + " : " + "zero edits away");
 			} else if(oneEditReplace(pair[0], pair[1])) {
 				System.out.println(pair[0] + ", " + pair[1] + " : " + "one replace edit away");
-			} else if(one_edit_insert(pair[0], pair[1])) {
+			} else if(oneEditInsert(pair[0], pair[1])) {
 				//System.out.println(pair[0] + ", " + pair[1] + " : " + "zero edits away");
 			} else {
 				System.out.println(pair[0] + ", " + pair[1] + " : " + "not zero or one edit away");
