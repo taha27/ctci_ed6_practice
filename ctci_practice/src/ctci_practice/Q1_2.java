@@ -8,23 +8,23 @@ public class Q1_2 {
 		//other if they have the same size
 		if(a.length() != b.length()) return false;
 		
-		int[] letter_count_a = new int[26];
-		int[] letter_count_b = new int[26];
+		int[] aLetterCount = new int[26];
+		int[] bLetterCount = new int[26];
 		
 		for(int i = 0; i < a.length(); i++) {
 			
 			//increase the array value at index corresponding to the letter found
-			int letter_val_a = a.charAt(i) - 'a';
-			letter_count_a[letter_val_a]++;
+			int aLetterVal = a.charAt(i) - 'a';
+			aLetterCount[aLetterVal]++;
 			
 			//increase the array value at index corresponding to the letter found
-			int letter_val_b = b.charAt(i) - 'a';
-			letter_count_b[letter_val_b]++;
+			int bLetterVal = b.charAt(i) - 'a';
+			bLetterCount[bLetterVal]++;
 		}
 		
 		//compare the letter counts of both strings
 		for(int i = 0; i < 26; i++) {
-			if(letter_count_a[i] != letter_count_b[i]) return false;
+			if(aLetterCount[i] != bLetterCount[i]) return false;
 		}
 		return true;
 	}
