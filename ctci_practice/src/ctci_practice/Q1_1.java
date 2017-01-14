@@ -6,19 +6,19 @@ public class Q1_1 {
 		if(str.length() > 128) return false;
 		
 		//create boolean array auto initialized to 0
-		boolean[] ascii_set = new boolean[128];
+		boolean[] asciiSet = new boolean[128];
 		
 		//loop to run check if any char has already been seen in the string
 		for(int i = 0; i < str.length(); i++) {
 			
 			//get the ascii value of the character
-			int ascii_val = str.charAt(i);
+			int asciiVal = str.charAt(i);
 			
 			//if the value at index val is 1(true), then the char is not unique
-			if(ascii_set[ascii_val]) return false;
+			if(asciiSet[asciiVal]) return false;
 			
 			//set the ascii_set value to true if unique
-			ascii_set[ascii_val] = true;
+			asciiSet[asciiVal] = true;
 		}
 		return true;
 	}
